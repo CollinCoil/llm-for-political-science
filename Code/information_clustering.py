@@ -23,7 +23,7 @@ def create_document_embeddings(data_dirs, metadata_file, output_embeddings, outp
             text = file.read()
 
         # Tokenize and split into chunks of 4096 tokens
-        tokens = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=4096)
+        tokens = tokenizer(text, return_tensors='pt', truncation=True, padding=False, max_length=4096)
         input_ids = tokens["input_ids"]
         attention_mask = tokens["attention_mask"]
 
@@ -103,13 +103,26 @@ def perform_clustering_and_visualize(embeddings_file, labels_file, n_clusters, o
     tsne = TSNE(n_components=2, random_state=42, perplexity=5)
     tsne_results = tsne.fit_transform(embeddings)
 
+    # Define case label names
+    case_label_names = [
+        "Burwell v. Hobby Lobby", 
+        "California v. Texas", 
+        "King v. Burwell", 
+        "Little Sisters v. Pennsylvania", 
+        "Maine Community Health v. US", 
+        "NFIB v. Sebelius"
+    ]
+
+    # Map case labels to names
+    labels_df['case label name'] = labels_df['case label'].map(lambda x: case_label_names[x])
+
     # Plot results
     plt.figure(figsize=(10, 8))
     scatter = sns.scatterplot(
         x=tsne_results[:, 0], 
         y=tsne_results[:, 1], 
         hue=labels_df['cluster'],        # Clustered case labels
-        style=labels_df['case label'],   # True case labels
+        style=labels_df['case label name'], # True case labels with names
         palette='tab10', 
         s=100
     )
@@ -119,11 +132,12 @@ def perform_clustering_and_visualize(embeddings_file, labels_file, n_clusters, o
 
     # Modify legend titles
     new_labels = ["Clustered Case Label" if label == "cluster" else label for label in labels]
-    new_labels = ["True Case Label" if label == "case label" else label for label in new_labels]
+    new_labels = ["True Case Label" if label == "case label name" else label for label in new_labels]
     scatter.legend(handles, new_labels, title="Legend")
 
     # Final plot settings
-    plt.title("t-SNE Visualization of Document Clusters")
+    plt.title("Visualization of Amicus Curiae Brief Clusters")
     plt.tight_layout()
     plt.savefig(output_plot)
     plt.show()
+

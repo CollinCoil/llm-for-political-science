@@ -1,0 +1,114 @@
+Sender: LSF System <lsfadmin@node03.hs.cluster>
+Subject: Job 4095: <summarization> in cluster <AUHPCGen3> Done
+
+Job <summarization> was submitted from host <login01.hs.cluster> by user <cc6121a-hpc> in cluster <AUHPCGen3> at Fri Dec 20 11:35:40 2024
+Job was executed on host(s) <node03.hs.cluster>, in queue <normal>, as user <cc6121a-hpc> in cluster <AUHPCGen3> at Fri Dec 20 11:35:41 2024
+</home/cc6121a-hpc> was used as the home directory.
+</home/cc6121a-hpc> was used as the working directory.
+Started at Fri Dec 20 11:35:41 2024
+Terminated at Fri Dec 20 11:36:32 2024
+Results reported at Fri Dec 20 11:36:32 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+
+#BSUB -gpu "num=1:gmodel=NVIDIAL40"
+#BSUB -q normal
+#BSUB -J summarization
+#BSUB -o %J.out
+#BSUB -e %J.err
+
+
+source ~/.bashrc
+conda activate /home/cc6121a-hpc/.conda/envs/reservoir
+/home/cc6121a-hpc/.conda/envs/reservoir/bin/python3.9 summarization.py nfib_v_sebelius_syllabus.txt
+conda deactivate 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   29.67 sec.
+    Max Memory :                                 1562 MB
+    Average Memory :                             1216.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                278
+    Run time :                                   54 sec.
+    Turnaround time :                            52 sec.
+
+The output (if any) follows:
+
+Processing model: google/flan-t5-small on GPU
+Summary 1: summary: The Patient Protection and Affordable Care Act requires most Americans to maintain "minimum essential" health insurance coverage and decrease the cost of health care. 5000A(b)(1). The Act provides that this "penalty" will be paid to the Internal Revenue Service with an individual's taxes, and "shall be assessed and collected in the same manner" as tax penalties.
+Summary 2: summary: The Patient Protection and Affordable Care Act requires most Americans to maintain "minimum essential" health insurance coverage and decrease the cost of health care. 5000A(b)(1). The Act provides that this "penalty" will be paid to the Internal Revenue Service with an individual's taxes, and "shall be assessed and collected in the same manner" as tax penalties. 5,000A(c), (g)(1)
+Summary 3: summary: The Patient Protection and Affordable Care Act requires most Americans to maintain "minimum essential" health insurance coverage and decrease the cost of health care. 26 U.S. C. 5000A.
+Processing model: google/flan-t5-base on GPU
+Summary 1: The Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power, but concluded that Congress lacked authority to enact the individual mandate
+Summary 2: Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power, but concluded that Congress lacked authority to enact the individual mandate
+Summary 3: The Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power, but concluded that Congress lacked authority to enact
+Processing model: google/flan-t5-large on GPU
+Summary 1: Medicaid expansion provisions, the Court of Appeals for the Eleventh Circuit reversed and remanded the case to the United States Court of Appeals for the Eleventh Circuit for further proceedings.
+Summary 2: Medicaid expansion provisions, the Court of Appeals for the Eleventh Circuit reversed and remanded the case to the United States Court of Appeals for the Eleventh Circuit.
+Summary 3: Medicaid expansion provisions, the Court of Appeals for the Eleventh Circuit reversed and remanded the case to the United States Court of Appeals for the Eleventh Circuit for a rehearing.
+Processing model: google/flan-t5-xl on GPU
+Summary 1: The Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power, but concluded that Congress lacked authority to enact the individual mandate.
+Summary 2: The Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power, but found that Congress lacked authority to enact the individual mandate.
+Summary 3: The Court of Appeals for the Eleventh Circuit upheld the Medicaid expansion as a valid exercise of Congress's spending power. Finding the mandate severable from the Act'
+Processing model: allenai/led-base-16384 on GPU
+Summary 1: ts and provide for the general Welfare of the United States." Art. I, 8, cl. 1. Congress may use this power to establish cooperative state-federal Spending Clause programs. The legitimacy of Spending Clause legislation, however, depends on whether a State voluntarily and knowingly accepts the terms of such programs. 26 U. S. C. 5000A. For individuals who are not exempt, and who do not receive health insurance through an employer or government program, the means of satisfying the requirement is to purchase insurance from a private company. Beginning in 2014, those who do not comply with the mandate, are required to purchase insurance from a private company. The provision of the Affordable Care Act provides that the States must pay a "tax" on the purchase of health insurance. The provision of the Affordable Care Act is a "tax" on the purchase of health insurance, and it requires the States to pay federal tax on those who do not comply with the provisions of the Affordable Care Act.
+Summary 2: ts and provide for the general Welfare of the United States." Art. I, 8, cl. 1. Congress may use this power to establish cooperative state-federal Spending Clause programs. The legitimacy of Spending Clause legislation, however, depends on whether a State voluntarily and knowingly accepts the terms of such programs. 26 U. S. C. 5000A. For individuals who are not exempt, and who do not receive health insurance through an employer or government program, the means of satisfying the requirement is to purchase insurance from a private company. Beginning in 2014, those who do not comply with the mandate, are required to purchase insurance from a private company. The provision of the Affordable Care Act provides that the States must pay a "tax" on the purchase of health insurance. The provision of the Affordable Care Act is a "tax" on the purchase of health insurance, and it requires the States to pay federal tax on those who do not comply with the mandate. 26 U. S.
+Summary 3: ts and provide for the general Welfare of the United States." Art. I, 8, cl. 1. Congress may use this power to establish cooperative state-federal Spending Clause programs. The legitimacy of Spending Clause legislation, however, depends on whether a State voluntarily and knowingly accepts the terms of such programs. 26 U. S. C. 5000A. For individuals who are not exempt, and who do not receive health insurance through an employer or government program, the means of satisfying the requirement is to purchase insurance from a private company. Beginning in 2014, those who do not comply with the mandate, are required to purchase insurance from a private company. The provision of the Affordable Care Act provides that the States must pay a "tax" on the purchase of health insurance. The provision of the Affordable Care Act is a "tax" on the purchase of health insurance, and it requires the States to pay federal tax on those who do not comply with the provisions of the Affordable Care Act,
+Processing model: allenai/led-base-16384-ms2 on GPU
+Summary 1: The Court found that the individual mandate can not be construed as a "tax" for purposes of the ACA .
+However , the Court also found that there was no reason for the provision to be construed to constitute a tax .
+The Court concluded that the provision of the Medicaid expansion is not a tax for the purpose of the Anti-Injunction Act , and that it does not apply to States that do not comply with the Affordable Care Act .
+Summary 2: The Court found that the individual mandate can not be construed as a "tax" for purposes of the ACA .
+However , the Court also found that there was no reason for the provision to be construed to constitute a tax .
+The Court concluded that the provision of the Medicaid expansion is not a tax for the purpose of the Anti-Injunction Act , and that it does not apply to States that do not comply with the Act .
+Summary 3: The Court found that the individual mandate can not be construed as a "tax" for purposes of the ACA .
+However , the Court also found that there was no reason for the provision to be construed to constitute a tax .
+The Court concluded that the provision of the Medicaid expansion is not a tax for the purpose of the Anti-Injunction Act , and that it does not apply to States that do not comply with the Affordable Care Act .
+It concluded that there is no reason to use the provisions of the Act as a means to impose taxes on individuals who do not buy that product .
+Processing model: allenai/led-base-16384-cochrane on GPU
+Summary 1: The provision of the individual mandate does not provide the necessary justification for the expansion of Medicaid. The provision does not allow Congress to impose a tax on individuals who do not comply with the provision. The provisions of the Affordable Care Act provide for the provision of shared responsibility payments, which cannot be used as a means of imposing a tax.
+Summary 2: The provision of the individual mandate does not provide the necessary justification for the expansion of Medicaid. The provision does not allow Congress to impose a tax on individuals who do not comply with the provision. The provisions of the Affordable Care Act provide for the provision of shared responsibility payments, which cannot be used as an instrument for imposing a tax. However, the provision is severable from the rest of the Constitution. This review demonstrates that the provision cannot be applied to any individual country. It is therefore clear to the Government that Congress cannot exercise its discretionary power to impose tax on people who fail to comply with a provision in the health care legislation. The interpretation of this review should be interpreted with caution, however, as it relates to several other important issues.
+Summary 3: The provision of the individual mandate does not provide the necessary justification for the expansion of Medicaid. The provision does not allow Congress to impose a tax on individuals who do not comply with the provision. The provisions of the Affordable Care Act provide for the provision of shared responsibility payments, which cannot be used as an instrument for imposing a tax. However, the provision is severable from the rest of the Constitution. This review demonstrates that the provision cannot be applied to any individual country. It is therefore clear to the Government that Congress cannot exercise its discretionary power to impose tax on people who fail to comply with a provision in the health care legislation. The interpretation of this review should be interpreted with caution, however, as it relates to several other important issues. The role of the Individual mandate in the implementation of new health care policies remains unclear. There is a need for these issues addressed in the context of the review.
+Processing model: allenai/led-large-16384 on GPU
+Summary 1: ts. CHIEF. 1. 2.3. 3. 4. (a) (5) and (b) (4) (5, 5) and a) (e) (c) (5) )) ) (e) and the "5), (d) ) . ) ) (1) (c) 1) (b) (d) (g) 1) (g) (c) (b) (e) (e) (e) and (f) (3) (g) (e) (f) (j) (g) and (g) (e) (j) (f) (c) (i) and (j) (3) (e) (f) (g) (i) (c) and (j) (c) (e) (f) (i) (g) (c) (e) (f) (g) (g) (
+Summary 2: ts. CHIEF. 1. 2.3. 3. 4. (a) (5) and (b) (4) (5, 5) and a) (e) (c) (5) )) ) (e) and the "5), (d) ) . ) ) (1) (c) 1) (b) (d) (g) 1) (g) (c) (b) (e) (e) (e) and (f) (3) (g) (e) (f) (j) (g) and (g) (e) (j) (f) (c) (i) and (j) (3) (e) (f) (g) (i) (c) and (j) (c) (e) (f) (i) (g) (c) (e) (f) (g) (f) (
+Summary 3: ts. CHIEF. 1. 2.3. 3. 4. (a) (5) and (b) (4) (5, 5) and a) (e) (c) (5) )) ) (e) and the "5), (d) ) . ) ) (1) (c) 1) (b) (d) (g) 1) (g) (c) (b) (e) (e) (e) and (f) (3) (g) (e) (f) (j) (g) and (g) (e) (j) (f) (c) (i) and (j) (3) (e) (f) (g) (i) (c) and (j) (c) (e) (f) (i) (g) (c) (e) (f) (g) (g) and
+Processing model: allenai/led-large-16384-arxiv on GPU
+Summary 1:  in 2010 , Congress enacted the Patient Protection and Affordable Care Act in order to increase the number of Americans covered by health insurance and decrease the cost of health care. under the Affordable Care Act , the individual mandate is transformed into a program to cover the health care needs of the entire nonelderly population with income below 133 percent of the poverty level . 
+ those who do not comply with the mandate must make a "shared responsibility payment" to the Federal Government . 
+ the payment is collected solely by the IRS through the normal means of taxation . 
+ the present challenge seeks to restrain the collection of the shared responsibility payment from those who do not comply with the individual mandate . 
+ the most straightforward reading of the individual mandate is that it commands individuals to purchase insurance. But the mandate need not be read to declare that failing to do so is unlawful. 
+ it may also be read as imposing a tax on those who go without insurance.    
+ the individual mandate thus violates
+Summary 2:  in 2010 , Congress enacted the Patient Protection and Affordable Care Act in order to increase the number of Americans covered by health insurance and decrease the cost of health care. under the Affordable Care Act , the individual mandate is transformed into a program to cover the health care needs of the entire nonelderly population with income below 133 percent of the poverty level . 
+ those who do not comply with the mandate must make a "shared responsibility payment" to the Federal Government . 
+ the payment is collected solely by the IRS through the normal means of taxation . 
+ the present challenge seeks to restrain the collection of the shared responsibility payment from those who do not comply with the individual mandate . 
+ the most straightforward reading of the individual mandate is that it commands individuals to purchase insurance. But the mandate need not be read to declare that failing to do so is unlawful. 
+ it may also be read as imposing a tax on those who go without insurance.    
+ the individual mandate is not
+Summary 3:  in 2010 , Congress enacted the Patient Protection and Affordable Care Act in order to increase the number of Americans covered by health insurance and decrease the cost of health care. under the Affordable Care Act , the individual mandate is transformed into a program to cover the health care needs of the entire nonelderly population with income below 133 percent of the poverty level . 
+ those who do not comply with the mandate must make a "shared responsibility payment" to the Federal Government . 
+ the payment is collected solely by the IRS through the normal means of taxation . 
+ the present challenge seeks to restrain the collection of the shared responsibility payment from those who do not comply with the individual mandate . 
+ the most straightforward reading of the individual mandate is that it commands individuals to purchase insurance. But the mandate need not be read to declare that failing to do so is unlawful. 
+ it may also be read as imposing a tax on those who go without insurance.    
+ * keywords : * individual
+
+
+PS:
+
+Read file <4095.err> for stderr output of this job.
+
