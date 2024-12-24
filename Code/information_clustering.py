@@ -123,7 +123,7 @@ def perform_clustering_and_visualize(embeddings_file, labels_file, n_clusters, o
         y=tsne_results[:, 1], 
         hue=labels_df['cluster'],        # Clustered case labels
         style=labels_df['case label name'], # True case labels with names
-        palette='tab10', 
+        palette='viridis', 
         s=100
     )
 
