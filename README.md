@@ -29,7 +29,7 @@ If you use this code, please use the following citation:
 ```
 @article{Coil2024Congressional,
   title={Large Language Models: A Survey with Application in Political Science},
-  author={Coil, Collin and Brucker, Caroline and Chen, O'Connor, Karen},
+  author={Coil, Collin and Brucker, Caroline and O'Connor, Karen},
   journal={Unpublished manuscript},
   year={2024}
 }
