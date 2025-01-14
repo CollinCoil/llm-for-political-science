@@ -1,1 +1,15 @@
-# transformers, enops, datasets, torch, sklearn, tqdm, pandas, numpy, seaborn, matplotlib, sentence transformers, spacy, accelerate, bitsandbytes, gensim, wget
+numpy==1.26.4
+pandas==2.2.1
+transformers==4.48.0.dev0
+einops==0.8.0
+datasets==3.0.2
+torch==2.5.1
+scikit-learn==1.4.1
+tqdm==4.66.6
+seaborn==0.13.2
+matplotlib==3.8.4
+sentence-transformers==3.2.1
+spacy==3.8.2
+accelerate==1.2.1
+gensim==4.3.3
+wget==3.2
