@@ -27,11 +27,14 @@ The data for this project is accessible in the `Data` folder within this reposit
 If you use this code, please use the following citation: 
 
 ```
-@article{Coil2025LLMs,
-  title={Large Language Models: A Survey with Application in Political Science},
-  author={Coil, Collin and Chen, Nicholas and Brucker, Caroline and O'Connor, Karen},
-  journal={Unpublished manuscript},
-  year={2025}
+@misc{coil_chen_bruckner_o'connor_2025,
+ title={Large Language Models: A Survey with Applications in Political Science},
+ url={osf.io/preprints/socarxiv/4cba6_v1},
+ DOI={10.31235/osf.io/4cba6_v1},
+ publisher={SocArXiv},
+ author={Coil, Collin A and Chen, Nicholas and Bruckner, Caroline and O'Connor, Karen},
+ year={2025},
+ month={Apr}
 }
 ```
-A link to the paper will be published here once it is available. 
+The paper is accessible here: [https://doi.org/10.31235/osf.io/4cba6_v1](https://doi.org/10.31235/osf.io/4cba6_v1).
